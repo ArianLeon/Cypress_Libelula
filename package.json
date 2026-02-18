@@ -1,0 +1,21 @@
+{
+  "name": "cypress--framework",
+  "version": "1.0.0",
+  "description": "Framework Testing Cypress",
+  "keywords": [
+    "automation",
+    "framework",
+    "cypress"
+  ],
+  "license": "ISC",
+  "author": "Arian",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^15.9.0"
+  }
+}
