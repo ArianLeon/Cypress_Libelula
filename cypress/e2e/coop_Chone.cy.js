@@ -94,7 +94,7 @@ it('Automatizacion modulos', () => {
 
 
 /*
-    //Modulo de pagos
+    //Modulo de pagos - No funciona el modulo 
 
     cy.contains('Pagos').click()
 
@@ -160,7 +160,7 @@ it('Automatizacion modulos', () => {
 */
 
 
-    //Modulo de recargas
+    //Modulo de recargas  -No funciona el modulo, no permite hacer el pago 
     cy.get('.cont-sidebar > :nth-child(1) > :nth-child(4) > a > .title').click()
     cy.get('[name="tranNumCuentaOrigen"]').select(cuentaOrigen)
     cy.get('#select2-serCodigo-container').click()
@@ -173,7 +173,7 @@ it('Automatizacion modulos', () => {
     cy.pause()
 
 
-    //Modulo de pago de creditos 
+    //Modulo de pago de creditos - No funciona el modulo 
     cy.get('.cont-sidebar > :nth-child(1) > :nth-child(5) > a > .title').click()
 
     //Modulo de perfil 
@@ -182,7 +182,7 @@ it('Automatizacion modulos', () => {
     //Modulo de dispositivos autorizados
     cy.get('.cont-sidebar > :nth-child(1) > :nth-child(8) > a > .title').click()
 
-    //Modulo de Manejo de cupos 
+    //Modulo de Manejo de cupos - No funciona el modulo 
     cy.get('.cont-sidebar > :nth-child(1) > :nth-child(9) > a > .title').click()
 
     //Modulo de cuentas favoritas 

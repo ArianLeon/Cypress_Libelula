@@ -313,7 +313,7 @@ describe('Atlantida', () => {
         //Modulo de dispositivos autorizados 
         cy.contains('Dispositivos autorizados').should('exist')// tiene error 
 
-                                            //Modulo de cuentas favoritas
+                                            //Modulo de cuentas favoritas - ultima opcion no funciona 
 
         //Agrega un cuenta nueva para transferencias internas
         cy.contains('Cuentas Favoritas').click()
