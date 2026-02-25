@@ -3,8 +3,8 @@ describe('Coop_Chone', () => {
     const url = 'https://chone-frontend-dev.coopchoneonline.com/'
 
     //Credenciales
-    const user = 'HGARCIA1205'
-    const password = 'Libelula.2025'
+    const user = ''
+    const password = ''
 
     //Modulo de trasferencias
     const cuentaOrigen = '118727111'
