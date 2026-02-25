@@ -1,4 +1,41 @@
 describe('Pastaza', () => {
+/*
+
+    function ingresarTokenAutomatico(intentos = 6) {
+
+    if (intentos === 0) throw new Error('El token no llegó');
+
+    return cy.task('getGmailToken').then((emails) => {
+
+        if (emails && emails.length > 0) {
+
+            const ultimoCorreo = emails[0];
+
+            const cuerpo = ultimoCorreo.body.text || ultimoCorreo.body.html;
+
+            const match = cuerpo.match(/Token:\s*(\d{6})/);
+
+            if (!match) {
+                cy.wait(5000);
+                return ingresarTokenAutomatico(intentos - 1);
+            }
+
+            const token = match[1];
+
+            cy.log('Token encontrado: ' + token);
+
+            return cy.get('[name="token"]')
+                    .should('be.visible')
+                    .clear()
+                    .type(token);
+        } 
+        else {
+            cy.wait(5000);
+            return ingresarTokenAutomatico(intentos - 1);
+        }
+    });
+}*/
+
 it('Automatizacion', () => {
 
     //variables 
@@ -87,8 +124,14 @@ it('Automatizacion', () => {
     //Da click al boton de login
     cy.get('#btn-login').click()
 
-    //Hace una pausa para enviar el token 
     cy.pause()
+    /*
+    cy.task('getGmailToken').then((token) => {
+    cy.get('[name="token"]')
+    .should('be.visible')
+    .clear()
+    .type(token);
+});*/
 
     //Modulo de trasferencia
     cy.get('#mm-1 > .mm-navbar > .mm-title').click({force: true})
@@ -133,7 +176,6 @@ it('Automatizacion', () => {
         cy.get('#select2-insCodigo-container').click()
         cy.get('.select2-search__field').type(`${bancoTarjeta}{enter}`)
         cy.get('[name="cueNumero"]').type(cuentaCreada)
-        cy.get('[name="cueNombre"]').type(alias1)
         cy.get('#tipoIdentificacionSelect').select('CÉDULA')
         cy.get('[name="cueIdentificacion"]').type(cedula)
         cy.get('[name="tranValor"]').type(valor)
