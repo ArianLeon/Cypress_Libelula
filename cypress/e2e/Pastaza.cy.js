@@ -1,40 +1,4 @@
 describe('Pastaza', () => {
-/*
-
-    function ingresarTokenAutomatico(intentos = 6) {
-
-    if (intentos === 0) throw new Error('El token no llegó');
-
-    return cy.task('getGmailToken').then((emails) => {
-
-        if (emails && emails.length > 0) {
-
-            const ultimoCorreo = emails[0];
-
-            const cuerpo = ultimoCorreo.body.text || ultimoCorreo.body.html;
-
-            const match = cuerpo.match(/Token:\s*(\d{6})/);
-
-            if (!match) {
-                cy.wait(5000);
-                return ingresarTokenAutomatico(intentos - 1);
-            }
-
-            const token = match[1];
-
-            cy.log('Token encontrado: ' + token);
-
-            return cy.get('[name="token"]')
-                    .should('be.visible')
-                    .clear()
-                    .type(token);
-        } 
-        else {
-            cy.wait(5000);
-            return ingresarTokenAutomatico(intentos - 1);
-        }
-    });
-}*/
 
 it('Automatizacion', () => {
 
@@ -125,13 +89,7 @@ it('Automatizacion', () => {
     cy.get('#btn-login').click()
 
     cy.pause()
-    /*
-    cy.task('getGmailToken').then((token) => {
-    cy.get('[name="token"]')
-    .should('be.visible')
-    .clear()
-    .type(token);
-});*/
+    
 
     //Modulo de trasferencia
     cy.get('#mm-1 > .mm-navbar > .mm-title').click({force: true})
@@ -402,7 +360,6 @@ it('Automatizacion', () => {
         cy.get('.div-campo > [name="cueAlias"]').clear().type(alias2);
         cy.get('#select2-insCodigo-container').click();
         cy.get('.select2-search__field').type(`${institucionF}{enter}`)
-        cy.get('[name="cueNombre"]').clear().type(alias1);
         cy.get('#tipoIdentificacionSelect').select('CÉDULA');
         cy.get('[name="cueIdentificacion"]').clear().type(cedula);
         cy.get('[name="cueTipo"]').select(tipoCuenta);
