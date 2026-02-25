@@ -6,8 +6,8 @@ it('Automatizacion', () => {
     const numeroCuenta = '651025';//Se usa en todos los campos de cuenta de origen 
     const url ='https://webfrontend80-dev.pastaza.nuvem.cloud/cacpeonline/login'//enlace web
     //credenciales
-    const user ='USRPRUEBA206589'//usuario
-    const password ='Libelula.2000'//contraseña
+    const user =''//usuario
+    const password =''//contraseña
     // para pruebas
     const alias1 = 'test'//Todos los campos de alias
     const alias2 ='prueba'//segundo alias 
@@ -89,6 +89,8 @@ it('Automatizacion', () => {
     cy.get('#btn-login').click()
 
     cy.pause()
+
+
     
 
     //Modulo de trasferencia
@@ -418,7 +420,7 @@ it('Automatizacion', () => {
         cy.pause() // pausa
 
         //Boton de cerrar sesion 
-        cy.wait(5000)
-        cy.get('#mm-0 > .mm-listview > :nth-child(10) > a').click()  
+        //cy.wait(5000)
+        //cy.get('#mm-0 > .mm-listview > :nth-child(10) > a').click()  
     })
 })
