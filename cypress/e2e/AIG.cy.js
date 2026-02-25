@@ -2,12 +2,12 @@ describe('AIG', () => {
 
     //variables 
     const url ='https://uat-aigecu-frontend-estatico.portalaig.com/principal'//Enlace de la pagina
-    const email ='fusiongroupbroker@gmail.com'//email
-    const password ='q6dVyj'//Contraseña
-    const polizas = ['140329']//Numeros de poliza 
+    const email =''//email
+    const password =''//Contraseña
+    const polizas = ['152897']//Numeros de poliza  153189, 152982, 152967, 153458
 
-    //correo para enviar Resumen de Cotización
-    const emailCotizacion = 'testlibelulasoft@gmail.com'
+    //correo para enviar Resumen de Cotización  
+    const emailCotizacion = 'testlibelulasoft@gmail.com' 
 
     //Datos del contratante
     const emailContratante ='testlibelulasoft@gmail.com'
@@ -50,7 +50,7 @@ describe('AIG', () => {
             .should('exist')
             .click()
 
-        cy.wait(3000)
+        cy.wait(5000)
 
         
             
@@ -105,7 +105,7 @@ describe('AIG', () => {
             .scrollIntoView()
             .click()
 
-        cy.wait(5000)
+        cy.wait(7000)
 
 
     //Agrega las coverturas adicionales, si ya estan agregadas sigue a la siguiente instruccion
@@ -119,7 +119,7 @@ describe('AIG', () => {
             .should('be.visible')
             .click();
             
-            cy.wait(5000);
+            cy.wait(7000);
         }
         });
 
@@ -127,14 +127,14 @@ describe('AIG', () => {
         .should('exist')
         .click({ force: true });
 
-        cy.wait(3000);
+        cy.wait(6000);
 
         //Boton  Actualizar
         cy.get(':nth-child(2) > .btn')
             .should('be.visible')
             .click()
 
-        cy.wait(3000)
+        cy.wait(6000)
 
         //Boton continuar
         cy.get(':nth-child(2) > .btn')
@@ -149,7 +149,9 @@ describe('AIG', () => {
             .scrollIntoView()
             .click({ force: true })
 
-            cy.pause() // --> pausa el proceso para visualizar el pdf 
+            cy.wait(9000)
+
+            //cy.pause() // --> pausa el proceso para visualizar el pdf 
         
 
         //Ingresa el correo para enviar la cotizacion
@@ -192,7 +194,7 @@ describe('AIG', () => {
         .clear()
         .type(celularContratante);
 
-        cy.wait(3000)
+        cy.wait(7000)
 
         //Presiona checkbox 
         cy.get('input[type="checkbox"]')
@@ -204,7 +206,7 @@ describe('AIG', () => {
         cy.contains('button', 'CONTINUAR')
         .click({ force: true });
 
-        cy.wait(4000)
+        cy.wait(6000)
         
         
 
@@ -215,7 +217,8 @@ describe('AIG', () => {
         .should('be.visible')
         .click({ force: true });
 
-        cy.pause()
+        cy.wait(6000)
+        //cy.pause()
 
     //paso del formulario se llena manualmente 
 
@@ -225,14 +228,14 @@ describe('AIG', () => {
         .should('be.visible')
         .click()
 
-        cy.wait(4000)
+        cy.wait(12000)
 
         // Boton ver renovaciones
         cy.contains('Ver Renovaciones')
         .should('be.visible')
         .click()
 
-        cy.wait(4000)
+        cy.wait(9000)
 
     })
 
