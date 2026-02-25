@@ -3,8 +3,8 @@ describe('Atlantida', () => {
     //Variable
     const url ='https://pruebas.bdmvirtual.com/dmiroonline/login'
     //Credenciales
-    const user ='PruebaQA5'
-    const password= 'Libelula.000'
+    const user =''
+    const password= ''
     //Pruebas
     const cuentaOrigen ='60092376'// cuenta con la que se hacen los pagos 
     const celular = '0998090335' // En todos los campos donde se requiera la celular
@@ -313,7 +313,7 @@ describe('Atlantida', () => {
         //Modulo de dispositivos autorizados 
         cy.contains('Dispositivos autorizados').should('exist')// tiene error 
 
-                                            //Modulo de cuentas favoritas - ultima opcion no funciona 
+                                            //Modulo de cuentas favoritas - ultima opcion no funciona
 
         //Agrega un cuenta nueva para transferencias internas
         cy.contains('Cuentas Favoritas').click()
